@@ -14,15 +14,25 @@ const actions = {
     path: `{{destinationpath}}/{{pascalCase name}}/{{pascalCase name}}.module.scss`,
     templateFile: `plop/styles.scss.hbs`,
   },
+  types: {
+    type: "add",
+    path: `{{destinationpath}}/{{pascalCase name}}/types.ts`,
+    templateFile: `plop/types.ts.hbs`,
+  },
+  utils: {
+    type: "add",
+    path: `{{destinationpath}}/{{pascalCase name}}/utils.ts`,
+    templateFile: `plop/utils.ts.hbs`,
+  },
 };
 
-module.exports = function (plop) {
+export default function (plop) {
   plop.setGenerator("component", {
     description: "empty component",
     prompts: [
       {
         type: "input",
-        default: "src",
+        default: "src/components",
         name: "destinationpath",
         message: "Destination path",
       },
@@ -32,6 +42,12 @@ module.exports = function (plop) {
         message: "Component name",
       },
     ],
-    actions: [actions.component, actions.index, actions.styles],
+    actions: [
+      actions.component,
+      actions.index,
+      actions.styles,
+      actions.types,
+      actions.utils,
+    ],
   });
 };

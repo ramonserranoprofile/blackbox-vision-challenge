@@ -1,5 +1,6 @@
 import * as React from "react";
-
+import Question from "../components/Question";
+import Results from "../components/Results";
 import logo from "../assets/logo.png";
 
 import styles from "./App.module.scss";
@@ -13,6 +14,10 @@ const App: React.FC = () => {
         </h1>
         <h3>Lets get this party started</h3>
       </header>
+      <section className={styles.content}>
+        <Question />
+        <Results />
+      </section>
     </main>
   );
 };
