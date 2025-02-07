@@ -69,6 +69,26 @@
         }
     },
     "submit": {
+        "development": {
+            "android": {
+                "serviceAccountKeyPath": "./service-account.json",
+                "track": "internal",
+                "releaseStatus": "draft"
+            },
+            "ios": {
+                "appleId": "XXXXXXXXXXXXXXXXXXXX"
+            }
+        },
+        "staging": {
+            "android": {
+                "serviceAccountKeyPath": "./service-account.json",
+                "track": "internal",
+                "releaseStatus": "draft"
+            },
+            "ios": {
+                "appleId": "XXXXXXXXXXXXXXXXXXXX"
+            }
+        },
         "production": {
             "android": {
                 "serviceAccountKeyPath": "./service-account.json",
