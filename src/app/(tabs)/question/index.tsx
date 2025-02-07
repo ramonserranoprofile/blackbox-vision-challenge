@@ -54,8 +54,8 @@ const QuestionScreen = () => {
 
     if (loading) return <ActivityIndicator size="large" />;
     if (error) return <Text>Error: {error}</Text>;
-    if (!questions || questions.length === 0) return <Text>No hay preguntas disponibles</Text>;
-    if (currentIndex >= questions.length) return <Text>Cargando siguiente pregunta...</Text> 
+    if (!questions || questions.length === 0) return <Text>Wait... no questions available yet.</Text>;
+    if (currentIndex >= questions.length) return <Text>Loading next question...</Text> 
 
     const currentQuestion = questions[currentIndex];
 

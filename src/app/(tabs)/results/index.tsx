@@ -14,10 +14,12 @@ const ResultsScreen = () => {
     const perfectScore = parseInt(params.perfectScore as string) || 0;
     
     const restartGame = () => {
-        dispatch(resetQuiz()); // 🔥 Resetea el estado de Redux antes de redirigir
-        router.replace('/(tabs)/question'); 
+        dispatch(resetQuiz()); // 🔥 Reset Redux state  before redirect
+        router.push('/(tabs)/question'); 
     };
-
+    const HorizontalLine = () => (
+    <View style={{ borderBottomWidth: 1, borderBottomColor: "#ccc", marginVertical: 10 }} />
+    );
     
     return (
         <Animated.View 
@@ -26,10 +28,11 @@ const ResultsScreen = () => {
                     style={styles.container}
                 >                      
             <View style={styles.scoreContainer}>
-                <Text style={styles.title}>¡Juego Terminado!</Text>
-                <Text style={styles.scoreText}>Puntaje Obtenido: {score}</Text>
-                <Text style={styles.maxScore}>Puntaje Máximo: {perfectScore}</Text>                
-                <Button title="Jugar Nuevamente" color="#4CAF50" onPress={restartGame} />
+                <Text style={styles.title}>¡Game Finished!</Text>
+                <Text style={styles.scoreText}>Score: {score}</Text>
+                <Text style={styles.maxScore}>Top score: {perfectScore}</Text>
+                <HorizontalLine />
+                <Button title="¡Play Again!" color="#4CAF50" onPress={restartGame} />
             </View>
         </Animated.View>
     );

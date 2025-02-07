@@ -1,4 +1,4 @@
-# **React Flow with Expo DOM Components Example**
+# **React Flow with Expo DOM Components Example** Note: GOT THIS TEMPLATE FOR FILE STRUCTURE So It looks like no mobile React Apps 
 
 ![React Flow with Expo DOM Components Example](https://github.com/user-attachments/assets/45459f24-3366-4ea8-809c-325d4b343f46)
 
@@ -17,6 +17,8 @@ This example demonstrates how to build engaging visual workflows in your Expo pr
 ## **🚀 Quick Start**
 
 Clone this example or create a new project using the command below:
+
+Installing:
 
 ```sh
 npx create-expo-app -e with-react-flow
@@ -80,41 +82,42 @@ npx create-expo-app -e with-react-flow
 - **Node Types**: Extend `nodeTypes` and `edgeTypes` in React Flow to create custom flowchart components.
 - **State Management**: Integrate tools like Zustand or Redux for advanced state handling.
 
+
+**Challenge files Structure:**
+
 ```
 📂 QUIZBOXMOBILE3
-├── app.json
-├── babel.config.js
-├── global.d.ts
-├── metro.config.js
-├── nativewind-env.d.ts
-├── package.json
-├── package-lock.json
-├── README.md
-├── tailwind.config.js
-├── tsconfig.json
-├── 📂 src
-│   ├── global.css
-│   ├── 📂 app
-│   │   ├── _layout.tsx
-│   │   ├── index.tsx
-│   ├── 📂 components
-│   │   ├── flow.css
-│   │   ├── flow-chart.tsx
-│   │   ├── flow-edge.tsx
-│   │   ├── flow-node.tsx
-│   ├── 📂 screens
-│   │   ├── QuestionScreen.tsx
-│   │   ├── ResultsScreen.tsx
-│   ├── 📂 store
-│   │   ├── index.ts
-│   │   ├── reducers.ts
-│   ├── 📂 actions
-│   │   ├── index.ts
-│   ├── 📂 assets
-│   │   ├── logo.png
-│   ├── App.tsx
+QuizBoxMobile3/
+│-- 📂src
+│   │-- 📂app/
+│   │   │-- 📂(tabs)/                # Folder for the tab layout
+│   │   │   │-- 📂question/          # Question screen
+│   │   │   │   ├── index.tsx
+│   │   │   │-- 📂results/           # Results screen
+│   │   │   │   ├── index.tsx
+│   │   │   ├── _layout.tsx            # # Tabs layout
+│   │   │-- index.tsx                 # Main entry screen
+│   │   │-- _layout.tsx               # Root layout (Stack navigation)
+│   │-- 📂assets/                     # Static assets like images and fonts
+│   │-- 📂assets/                     # Static assets like images and fonts
+│   │-- 📂components/                 # Reusable UI components
+│   │-- 📂constants/                  # Global variables and configurations
+│   │-- 📂store/                      # Redux store
+│   │-- 📂types/                      # types
+│   │-- 📂utils/                      # Utility functions
+│-- global.css                  # global styles
+│-- app.json                    # Expo configuration
+│-- tsconfig.json               # TypeScript configuration
+│-- babel.config.js             # Babel configuration
+│-- metro.config.js             # Metro bundler configuration
+│-- .env                        # environment variables
+│-- .gitignore                  # Files to ignore in Git
+│-- nativewind-env.d.ts         # NativeWind styles bridge between Tailwind and React Native
+│-- tailwind.config             # TailWind config file
+│-- README.md                   # Readme File for Instructions and documentation
 ```
+**Necessary dependencies:**
 
-npm install axios html-entities react-redux @reduxjs/toolkit react-navigation @react-navigation/native @react-navigation/stack
-npm install react-native-dotenv --save-dev
-npx expo install react-native-reanimated
+npm install axios html-entities react-redux @reduxjs/toolkit react-navigation @react-navigation/native @react-navigation/stack react-native-reanimated
+
+npm install react-native-dotenv @types/react-native --save-dev
