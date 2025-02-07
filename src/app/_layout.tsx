@@ -11,21 +11,19 @@ export default function RootLayout() {
     <Provider store={store}>
       <View style={styles.header}>
         <Image 
-          source={require("../assets/logo.png")}
+          source={require('../assets/logo.png')}
           style={styles.logo}
-          resizeMode="contain"
-        />
+          
+        />        
         <Text style={styles.title}>Let's get this party started</Text>
       </View>
       
-      {/* Use Stack for global navigation */}
+      
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        
-        {/* Nest the tab layout properly */}
         <Tabs.Screen 
           name="(tabs)" 
-          options={{ headerShown: false }} 
+          options={{ headerShown: false }}          
         />
       </Stack>
     </Provider>
@@ -42,54 +40,10 @@ const styles = StyleSheet.create({
   logo: {
     width: 200,
     height: 60,
+    resizeMode: "contain",
   },
   title: {
     fontSize: 18,
     fontWeight: "bold",
   },
 });
-
-
-// export default function RootLayout() {
-//   return (
-//     <Provider store={store}>
-//       <View style={styles.header}>
-//         <Image 
-//           source={require('../assets/logo.png')}
-//           style={styles.logo}
-//           resizeMode="contain"
-//         />
-//         <Text style={styles.title}>Let's get this party started</Text>
-//       </View>
-//       <Stack>
-//         <Stack.Screen name="index" options={{ headerShown: false }} />
-//         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-//           <Stack.Screen 
-//             name="question"
-//             options={{ title: 'Pregunta', headerShown: false }}
-//           />
-//           <Stack.Screen 
-//             name="results"
-//             options={{ title: 'Resultados', headerShown: false }}
-//           />
-//       </Stack>
-//     </Provider>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   header: {
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     paddingVertical: 20,
-//     backgroundColor: '#fff',
-//   },
-//   logo: {
-//     width: 200,
-//     height: 60,
-//   },
-//   title: {
-//     fontSize: 18,
-//     fontWeight: 'bold',
-//   },
-// });

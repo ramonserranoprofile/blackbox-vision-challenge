@@ -1,0 +1,83 @@
+{
+    "build": {
+        "base": {
+            "node": "18.20.3",
+            "yarn": "1.22.5",
+            "env": {
+                "EXAMPLE_ENV": "API_URL"
+            },
+            "android": {
+                "image": "default",
+                "resourceClass": "medium",
+                "env": {
+                    "PLATFORM": "android"
+                }
+            },
+            "ios": {
+                "image": "latest",
+                "resourceClass": "medium",
+                "env": {
+                    "PLATFORM": "ios"
+                }
+            }
+        },
+        "development": {
+            "extends": "base",
+            "developmentClient": true,
+            "env": {
+                "ENVIRONMENT": "development"
+            },
+            "android": {
+                "distribution": "internal",
+                "withoutCredentials": true,
+                "buildType": "apk",
+                "autoIncrement": "versionCode"
+            },
+            "ios": {
+                "simulator": true,
+                "autoIncrement": "buildNumber"
+            }
+        },
+        "staging": {
+            "extends": "base",
+            "env": {
+                "ENVIRONMENT": "staging"
+            },
+            "distribution": "internal",
+            "android": {
+                "buildType": "apk",
+                "autoIncrement": "versionCode"
+            },
+            "ios": {
+                "buildConfiguration": "Debug",
+                "autoIncrement": "buildNumber"
+            }
+        },
+        "production": {
+            "extends": "base",
+            "env": {
+                "ENVIRONMENT": "production"
+            },
+            "android": {
+                "buildType": "app-bundle",
+                "autoIncrement": "versionCode"
+            },
+            "ios": {
+                "buildConfiguration": "Release",
+                "autoIncrement": "buildNumber"
+            }
+        }
+    },
+    "submit": {
+        "production": {
+            "android": {
+                "serviceAccountKeyPath": "./service-account.json",
+                "track": "production",
+                "releaseStatus": "completed"
+            },
+            "ios": {
+                "appleId": "tu_email@ejemplo.com"
+            }
+        }
+    }
+}
