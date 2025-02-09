@@ -12,8 +12,8 @@ export default function RootLayout() {
       <View style={styles.header}>
         <Image 
           source={require('../assets/logo.png')}
-          style={styles.logo}
-          
+          resizeMode="contain"
+          style={styles.logo}          
         />        
         <Text style={styles.title}>Let's get this party started</Text>
       </View>
@@ -25,6 +25,7 @@ export default function RootLayout() {
           name="(tabs)" 
           options={{ headerShown: false }}          
         />
+        <Stack.Screen name="+not-found" options={{}} />
       </Stack>
     </Provider>
   );
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 200,
     height: 60,
-    resizeMode: "contain",
+    
   },
   title: {
     fontSize: 18,

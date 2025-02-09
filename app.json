@@ -3,9 +3,18 @@
     "scheme": "acme",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
+    "icon": "./src/assets/images/favicon.png",
+    "newArchEnabled": true,
     "web": {
-      "output": "static",
+      "output": "server",
       "bundler": "metro"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/favicon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.quizboxmobile3"
     },
     "plugins": [
       [

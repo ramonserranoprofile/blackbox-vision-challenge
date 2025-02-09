@@ -1,8 +1,23 @@
-# **React Flow with Expo DOM Components Example** Note: GOT THIS TEMPLATE FOR FILE STRUCTURE So It looks like no mobile React Apps 
+# **React Native + Expo Mobile App** 
 
-![React Flow with Expo DOM Components Example](https://github.com/user-attachments/assets/45459f24-3366-4ea8-809c-325d4b343f46)
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-Create **interactive flowcharts and diagrams** using the powerful combination of [React Flow](https://reactflow.dev/), [Expo DOM Components](https://docs.expo.dev/guides/dom-components/), and additional tools like **Expo Router**, **Tailwind CSS**, and **Nativewind** for a seamless, customizable, and modern development experience.
+## Get started
+
+npx create-expo-app@latest
+
+app name  QuizBoxMobile
+Install dependencies
+
+```bash
+npm install expo install react-redux @reduxjs/toolkit
+```
+
+```bash
+npx expo install   expo install react-redux @reduxjs/toolkit
+```
+
+Create **Quiz game** using the powerful combination of [React Native](https://reactnative.dev/), [Expo DOM Components](https://docs.expo.dev/guides/dom-components/), and additional tools like **Expo Router**, **Tailwind CSS**, and **Nativewind** for a seamless, customizable, and modern development experience.
 
 This example demonstrates how to build engaging visual workflows in your Expo project with a fully styled and routed application setup.
 
@@ -86,7 +101,7 @@ npx create-expo-app -e with-react-flow
 **Challenge files Structure:**
 
 ```
-📂 QUIZBOXMOBILE3
+📂 BLACKBOX-VISION-CHALLENGE
 QuizBoxMobile3/
 │-- 📂src
 │   │-- 📂app/
@@ -99,11 +114,10 @@ QuizBoxMobile3/
 │   │   │-- index.tsx                 # Main entry screen
 │   │   │-- _layout.tsx               # Root layout (Stack navigation)
 │   │-- 📂assets/                     # Static assets like images and fonts
-│   │-- 📂assets/                     # Static assets like images and fonts
 │   │-- 📂components/                 # Reusable UI components
-│   │-- 📂constants/                  # Global variables and configurations
-│   │-- 📂store/                      # Redux store
-│   │-- 📂types/                      # types
+│   │-- 📂actions                     # Redux actions
+│   │-- 📂store/                      # Redux config (reducers, slices, etc.).
+│   │-- 📂types/                      # TypeScript  for typing
 │   │-- 📂utils/                      # Utility functions
 │-- global.css                  # global styles
 │-- app.json                    # Expo configuration
