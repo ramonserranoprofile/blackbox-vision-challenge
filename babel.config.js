@@ -14,6 +14,7 @@ module.exports = function (api) {
           safe: false,
           allowUndefined: true,
         },
+        '@babel/plugin-proposal-export-namespace-from',
         'react-native-reanimated/plugin',
       ]
     ],

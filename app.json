@@ -5,6 +5,9 @@
     "orientation": "default",
     "icon": "./src/assets/images/favicon.png",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./src/assets/images/splash.png"
+    },
     "web": {
       "output": "server",
       "bundler": "metro"

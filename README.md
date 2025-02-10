@@ -117,6 +117,12 @@ npx expo start --tunnel  (make sure to have granted permissions to Ngrok in your
 
 npx expo start --clear
 
+to prebuild the andriod project 
+npx expo prebuild
+
+to build the android project folder and .apk installer
+npx expo run:andriod  or npm expo run:ios
+
 <table>
   <tr>
     <td><img src="./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211054.png" width="130"></td>
