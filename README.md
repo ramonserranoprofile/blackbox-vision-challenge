@@ -1,30 +1,21 @@
-# **React Native + Expo Mobile App** 
+# **React Native + Expo mobile App** 
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
-npx create-expo-app@latest
+npx create-expo-app@latest <app_name>
 
-app name  QuizBoxMobile
-Install dependencies
+app name  QuizBoxMobile3
 
-```bash
-npm install expo install react-redux @reduxjs/toolkit
-```
+Create **Quiz game** using the powerful combination of [React Native](https://reactnative.dev/), and additional tools like **Expo Router**, for a seamless, customizable, and modern development experience.
 
-```bash
-npx expo install @expo/ngrok react-native-dotenv react-test-renderer typescript
-```
-
-Create **Quiz game** using the powerful combination of [React Native](https://reactnative.dev/), and additional tools like **Expo Router**, **Tailwind CSS**, and **Nativewind** for a seamless, customizable, and modern development experience.
-
-This example demonstrates how to build engaging visual workflows in your Expo project with a fully styled and routed application setup.
+This challenge demonstrates how to build engaging visual of an interactive quiz game in your Expo project with a fully styled and routed application setup.
 
 ## **🌟 Features**
 
 - **Expo Router Integration**: Navigate between screens with the robust, file-based routing system from Expo Router.
-- **Tailwind CSS with Nativewind**: Style your components efficiently using Tailwind CSS and Nativewind for consistent design across platforms.
+
 - **Customizable and Extendable**: Modify styles and interactions to match your needs.
 
 ## **🚀 Quick Start**
@@ -50,7 +41,7 @@ npx create-expo-app blackbox-vision-challenge
    and 
 
    ```bash
-   npm install react-native-dotenv @types/react-native  @expo/ngrok react-test-renderer jest jest-expo @types/react-test-renderer typescript @types/react --save-dev
+   npm install  --save-dev react-native-dotenv @types/react-native  @expo/ngrok react-test-renderer jest jest-expo @types/react-test-renderer typescript @types/react
    ```
 
 2. **Start the Development Server**  
@@ -65,27 +56,18 @@ npx create-expo-app blackbox-vision-challenge
 
 ### **Expo Router**
 
-- A file-based routing system for Expo apps.
+- A file-based routing navigation system for Expo apps.
 - Simplifies navigation with nested routes.
 
 **Learn More**: [https://docs.expo.dev/router/introduction/](https://docs.expo.dev/router/introduction/)
 
-### **Tailwind CSS & Nativewind**
-
-- Tailwind CSS enables utility-first styling for rapid UI development.
-- Nativewind bridges Tailwind with React Native for consistent styling across platforms.
-
 **Learn More**:
-
-- Tailwind CSS: [https://tailwindcss.com/](https://tailwindcss.com/)
-- Nativewind: [https://www.nativewind.dev/](https://www.nativewind.dev/)
 
 ## **🛠️ Customization Tips**
 
 - **Routing**: Modify the routes or create additional screens in the `app/` directory using Expo Router.
-- **Styling**: Edit Tailwind classes or configure `tailwind.config.js` to customize themes.
-- **Node Types**: Extend `nodeTypes` and `edgeTypes` in React Flow to create custom flowchart components.
-- **State Management**: Integrate tools like Zustand or Redux for advanced state handling.
+- **Styling**: inline traditional for React Native
+- **State Management**: Integrate tools like Redux for advanced global state handling.
 
 
 **Challenge files Structure:**
@@ -120,6 +102,8 @@ QuizBoxMobile3/
 │-- tailwind.config             # TailWind config file
 │-- README.md                   # Readme File for Instructions and documentation
 ```
+
+
 **Necessary dependencies:**
 
 You have to install Android SDK for andriod emulator, or Xcode ios emulator for macOS. and/or
@@ -133,7 +117,10 @@ npx expo start --tunnel  (make sure to have granted permissions to Ngrok in your
 
 npx expo start --clear
 
-![Intro Screen](./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211054.png)
-![Quiz Game Main Screen](./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211108.png)
-![Results Screen](./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211304.png)
-
+<table>
+  <tr>
+    <td><img src="./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211054.png" width="130"></td>
+    <td><img src="./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211108.png" width="130"></td>
+    <td><img src="./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211304.png" width="130"></td>
+  </tr>
+</table>
