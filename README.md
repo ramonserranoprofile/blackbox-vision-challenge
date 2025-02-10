@@ -14,20 +14,18 @@ npm install expo install react-redux @reduxjs/toolkit
 ```
 
 ```bash
-npx expo install   expo install react-redux @reduxjs/toolkit
+npx expo install @expo/ngrok react-native-dotenv react-test-renderer typescript
 ```
 
-Create **Quiz game** using the powerful combination of [React Native](https://reactnative.dev/), [Expo DOM Components](https://docs.expo.dev/guides/dom-components/), and additional tools like **Expo Router**, **Tailwind CSS**, and **Nativewind** for a seamless, customizable, and modern development experience.
+Create **Quiz game** using the powerful combination of [React Native](https://reactnative.dev/), and additional tools like **Expo Router**, **Tailwind CSS**, and **Nativewind** for a seamless, customizable, and modern development experience.
 
 This example demonstrates how to build engaging visual workflows in your Expo project with a fully styled and routed application setup.
 
 ## **🌟 Features**
 
-- **Interactive Flowcharts**: Leverage React Flow's versatile library to design and manage node-based workflows.
-- **Cross-Platform Ready**: Use Expo DOM Components for seamless web-based Expo integration.
 - **Expo Router Integration**: Navigate between screens with the robust, file-based routing system from Expo Router.
 - **Tailwind CSS with Nativewind**: Style your components efficiently using Tailwind CSS and Nativewind for consistent design across platforms.
-- **Customizable and Extendable**: Modify styles, nodes, edges, and interactions to match your needs.
+- **Customizable and Extendable**: Modify styles and interactions to match your needs.
 
 ## **🚀 Quick Start**
 
@@ -36,7 +34,7 @@ Clone this example or create a new project using the command below:
 Installing:
 
 ```sh
-npx create-expo-app -e with-react-flow
+npx create-expo-app blackbox-vision-challenge
 ```
 
 ### **Steps to Run the Example**
@@ -46,32 +44,24 @@ npx create-expo-app -e with-react-flow
 
    ```sh
    cd your-project-name
-   yarn
+   
+   npm install axios html-entities react-redux @reduxjs/toolkit react-native-reanimated react-native-safe-area-context react-native-screens
+   ```
+   and 
+
+   ```bash
+   npm install react-native-dotenv @types/react-native  @expo/ngrok react-test-renderer jest jest-expo @types/react-test-renderer typescript @types/react --save-dev
    ```
 
 2. **Start the Development Server**  
    Launch the Expo development server:
    ```sh
-   npx expo
+   npx expo  (Recomended: to use with qr scanning, use option "--tunnel" to use Ngrok tunneling)
    ```
 3. **Explore and Customize**  
-   Navigate through the app using Expo Router and modify the provided flowchart components, styles, and routes.
+   Navigate through the app using Expo Router and modify screens, components, styles, and routes.
 
 ## **📚 Tech Stack and Tools**
-
-### **React Flow**
-
-- Powerful library for building node-based workflows.
-- Highly customizable and interactive.
-
-**Learn More**: [https://reactflow.dev/docs/](https://reactflow.dev/docs/)
-
-### **Expo DOM Components**
-
-- Integrates React DOM APIs for web projects in Expo.
-- Makes it easy to build web-compatible apps.
-
-**Learn More**: [https://docs.expo.dev/guides/dom-components/](https://docs.expo.dev/guides/dom-components/)
 
 ### **Expo Router**
 
@@ -132,6 +122,18 @@ QuizBoxMobile3/
 ```
 **Necessary dependencies:**
 
-npm install axios html-entities react-redux @reduxjs/toolkit react-navigation @react-navigation/native @react-navigation/stack react-native-reanimated
+You have to install Android SDK for andriod emulator, or Xcode ios emulator for macOS. and/or
+you have to install Expo Go for android or ios in your mobile phone
 
-npm install react-native-dotenv @types/react-native --save-dev
+1.- to start with Expo Go app  with web press(w), andriod(press a) or scanning  a Qr code(scan qr code after start Expo app with "npx expo start") , 
+
+npx expo start --tunnel  (make sure to have granted permissions to Ngrok in your Antivirus or FireWall)
+
+2.- to start with cleared cache 
+
+npx expo start --clear
+
+![Intro Screen](./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211054.png)
+![Quiz Game Main Screen](./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211108.png)
+![Results Screen](./src/assets/images/Captura%20de%20pantalla%202025-02-09%20211304.png)
+
