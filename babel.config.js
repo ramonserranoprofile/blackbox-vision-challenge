@@ -13,10 +13,10 @@ module.exports = function (api) {
           path: '.env',
           safe: false,
           allowUndefined: true,
-        },
-        '@babel/plugin-proposal-export-namespace-from',
-        'react-native-reanimated/plugin',
-      ]
+        }
+      ],
+      '@babel/plugin-proposal-export-namespace-from',
+      'react-native-reanimated/plugin',
     ],
   };
 };

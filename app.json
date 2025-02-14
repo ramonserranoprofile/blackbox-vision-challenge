@@ -3,7 +3,7 @@
     "scheme": "acme",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
-    "icon": "./src/assets/images/favicon.png",
+    "icon": "./src/assets/images/faviconcopy2.png",
     "newArchEnabled": true,
     "splash": {
       "image": "./src/assets/images/splash.png"

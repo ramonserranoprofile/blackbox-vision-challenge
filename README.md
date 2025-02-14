@@ -36,13 +36,8 @@ npx create-expo-app blackbox-vision-challenge
    ```sh
    cd your-project-name
    
-   npm install axios html-entities react-redux @reduxjs/toolkit react-native-reanimated react-native-safe-area-context react-native-screens
-   ```
-   and 
-
-   ```bash
-   npm install  --save-dev react-native-dotenv @types/react-native  @expo/ngrok react-test-renderer jest jest-expo @types/react-test-renderer typescript @types/react
-   ```
+   npm install 
+   ```    
 
 2. **Start the Development Server**  
    Launch the Expo development server:
@@ -103,7 +98,6 @@ QuizBoxMobile3/
 │-- README.md                   # Readme File for Instructions and documentation
 ```
 
-
 **Necessary dependencies:**
 
 You have to install Android SDK for andriod emulator, or Xcode ios emulator for macOS. and/or
@@ -113,15 +107,23 @@ you have to install Expo Go for android or ios in your mobile phone
 
 npx expo start --tunnel  (make sure to have granted permissions to Ngrok in your Antivirus or FireWall)
 
-2.- to start with cleared cache 
+2.- to start with cleared cache
 
+```bash
 npx expo start --clear
+```
+to prebuild the andriod project
 
-to prebuild the andriod project 
+```bash 
 npx expo prebuild
-
+```
 to build the android project folder and .apk installer
+```bash
 npx expo run:andriod  or npm expo run:ios
+```
+
+
+**App Screens Images**
 
 <table>
   <tr>

@@ -32,7 +32,9 @@ const ResultsScreen = () => {
                 <Text style={styles.scoreText}>Score: {score}</Text>
                 <Text style={styles.maxScore}>Top score: {perfectScore}</Text>
                 <HorizontalLine />
-                <Button title="¡Play Again!" color="#4CAF50" onPress={restartGame} />
+                <View style={styles.button}>
+                    <Button  title="¡Play Again!" onPress={restartGame} />
+                </View>
             </View>
         </Animated.View>
     );
@@ -41,38 +43,58 @@ const ResultsScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         padding: 20,
-        backgroundColor: '#f5f5f5'
+        backgroundColor: "#25292e",
     },
     title: {
         fontSize: 24,
-        fontWeight: 'bold',
+        fontWeight: "bold",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        marginTop: 20,
         marginBottom: 30,
-        color: '#333'
+        color: "red",
     },
     scoreContainer: {
-        backgroundColor: 'white',
+        backgroundColor: "#cccccc",
         padding: 20,
+        width: "100%",
         borderRadius: 10,
         marginBottom: 30,
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-        elevation: 3 // Para Android
+        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+        elevation: 3, // Para Android
     },
     scoreText: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 18,
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        fontWeight: "bold",
+        fontSize: 20,
         marginBottom: 10,
-        color: '#2196F3'
+        color: "#2196F3",
     },
     maxScore: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 16,
-        color: '#666'
-    }
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        fontSize: 20,
+        color: "#28a745",
+    },
+    button: {
+        display: "flex",
+        width: "auto",
+        height: 40,    
+        fontWeight: "bold",    
+        marginVertical: 5,
+        color: "#25292e",
+        textAlign: "center",
+        borderRadius: 10,
+        justifyContent: "center",
+        marginTop: 5,
+    },
 });
 
 export default ResultsScreen;

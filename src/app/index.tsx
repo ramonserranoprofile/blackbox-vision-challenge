@@ -10,20 +10,24 @@
 // srv/app/index.tsx
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { router, Redirect } from 'expo-router';
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
+
+
 const HorizontalLine = () => (
   <View style={{ borderBottomWidth: 1, borderBottomColor: "#ccc", marginVertical: 10 }} />
 )
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Welcome to the QuizBox App!</Text>
-      <Text>Ready to start the quiz?</Text>
+    <ThemedView style={styles.container}>
+      <ThemedText>Welcome to the QuizBox App!</ThemedText>
+      <ThemedText>Ready to start the quiz?</ThemedText>
       <HorizontalLine />
-      <Button 
-        title="Start Quiz" 
-        onPress={() => router.push('/(tabs)/question')} 
+      <Button
+        title="Start Quiz"
+        onPress={() => router.push("/(tabs)/question")}
       />
-    </View>
+    </ThemedView>
   );
 }
 

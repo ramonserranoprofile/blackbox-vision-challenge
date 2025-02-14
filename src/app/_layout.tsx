@@ -5,18 +5,19 @@ import { Stack, Tabs } from 'expo-router';
 import { Provider } from 'react-redux';
 import { store } from '../store';
 import { View, Text, Image, StyleSheet } from 'react-native';
-
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 export default function RootLayout() {
   return (
     <Provider store={store}>
-      <View style={styles.header}>
+      <ThemedView style={styles.header}>
         <Image 
           source={require('../assets/logo.png')}
           resizeMode="contain"
           style={styles.logo}          
         />        
-        <Text style={styles.title}>Let's get this party started</Text>
-      </View>
+        <ThemedText style={styles.title}>Let's get this party started</ThemedText>
+      </ThemedView>
       
       
       <Stack>
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 20,
-    backgroundColor: "#fff",
+    backgroundColor: "#424242",
   },
   logo: {
     width: 200,
@@ -46,5 +47,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "#aacccc"
   },
 });
