@@ -1,32 +1,21 @@
 // src/app/index.tsx
-
-
-// to redirect automatically 
-// export default function IndexScreen() {
-//   return <Redirect href="/(tabs)/question" />;
-// } 
-
-
-// srv/app/index.tsx
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { router, Redirect } from 'expo-router';
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-
-
-const HorizontalLine = () => (
-  <View style={{ borderBottomWidth: 1, borderBottomColor: "#ccc", marginVertical: 10 }} />
-)
+import { HorizontalLine } from "@/components/HorizontalLine";
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
       <ThemedText>Welcome to the QuizBox App!</ThemedText>
       <ThemedText>Ready to start the quiz?</ThemedText>
       <HorizontalLine />
-      <Button
-        title="Start Quiz"
-        onPress={() => router.push("/(tabs)/question")}
-      />
+      <View style={styles.button}>
+        <Button
+          title="Start Quiz"
+          onPress={() => router.push("/(tabs)/question")}
+        />
+      </View>
     </ThemedView>
   );
 }
@@ -34,7 +23,15 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center"       
+  },
+  button: {
+    width: "95%",
+    margin: 10,    
+    justifyContent: "center",    
+    textAlign: "center",
+    borderRadius: 8,
+    overflow: "hidden",
   },
 });
