@@ -25,7 +25,7 @@ const ResultsScreen = () => {
 
     useEffect(() => {
         if (isPerfect && confettiRef.current) {
-        confettiRef.current.start();
+            confettiRef.current.start();
         }
     }, [isPerfect]);
 
@@ -35,20 +35,22 @@ const ResultsScreen = () => {
             exiting={FadeOutDown.duration(300)}
             style={styles.container}
         >
-            {isPerfect && (
-            <ConfettiCannon
-                ref={confettiRef}                
-                count={300}
-                origin={{ x: 40, y: 40 }}
-                explosionSpeed={350}
-                fallSpeed={3000}
-                fadeOut={false}
+            { 
+                <ConfettiCannon
+                    ref={confettiRef}
+                    count={300}
+                    origin={{ x: 40, y: 40 }}
+                    explosionSpeed={350}
+                    fallSpeed={3000}
+                    fadeOut={false}
                 />
-            )}
+            }
             <Text style={styles.title}>
-                {isPerfect ? "🌟 Perfect Score! 🌟" : "🎉 Game Finished! 🎉"}
+                {isPerfect
+                    ? "🌟 Perfect Score! 🌟"
+                    : "🎉 Game Finished! 🎉"}
             </Text>
-            
+
             <View style={styles.button}>
                 <Button title="¡Play Again!" onPress={restartGame} />
             </View>

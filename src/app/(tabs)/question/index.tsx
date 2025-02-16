@@ -97,8 +97,18 @@ const QuestionScreen = () => {
           </View>
         ))}
       </Animated.View>
-      <View style={ { flex: 0, alignContent: 'center', justifyContent: 'center' } }>
-        <Text style={styles.score}>Current Score: {score} / {perfectScore}</Text>
+      <View
+        style={{
+          flex: 0,
+          alignContent: "center",
+          justifyContent: "center",
+          marginVertical: 20,
+          
+        }}
+      >
+        <Text style={styles.score}>
+          Current Score: {score} / {perfectScore}
+        </Text>
       </View>
     </Animated.View>
   );
@@ -116,6 +126,7 @@ const styles = StyleSheet.create({
   category: { fontSize: 16, color: "#37a3f0", textAlign: "center" },
   difficulty: { fontSize: 16, color: "#E2C08D", textAlign: "center" },
   question: {
+    height: '15%',
     fontSize: 20,
     color: "#6161b0",
     textAlign: "center",
@@ -124,13 +135,17 @@ const styles = StyleSheet.create({
   score: {
     fontSize: 22,
     fontWeight: "bold",
+    height: '20%',
     color: "#28a745",
+    justifyContent: "center",
+    alignItems: "center",
     textAlign: "center",
-    marginTop: 15,
+    marginVertical: 20,
   },
   error: { fontSize: 18, color: "red", textAlign: "center" },
   indicator: { flex: 1, justifyContent: "center", alignItems: "center" },
   gridContainer: {
+    height: '20%',
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
@@ -145,4 +160,3 @@ const styles = StyleSheet.create({
 });
 
 export default QuestionScreen;
-
